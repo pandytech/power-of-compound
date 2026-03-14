@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Zinsrechner: Endkapital einer Geldanlage verstehen">
+    <meta name="description" content="Nutze den Zinsrechner für einmalige Geldanlagen, um dein mögliches Endkapital und die Wirkung der Zinsen einfach und transparent zu verstehen.">
+    <meta name="keywords" content="Zinsrechner einmalige Geldanlage, Endkapital berechnen, Zinsen und Zinseszins verstehen, Geldanlage einfach erklärt">
+    <meta name="author" content="Finanz Rechner">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="de">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    
+    <link rel="canonical" href="https://zinseszinsrechners.de/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Zinsrechner: Endkapital einer Geldanlage verstehen">
+    <meta property="og:description" content="Nutze den Zinsrechner für einmalige Geldanlagen, um dein mögliches Endkapital und die Wirkung der Zinsen einfach und transparent zu verstehen.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://zinseszinsrechners.de/">
+    <meta property="og:site_name" content="Finanz Rechner">
+    <meta property="og:image" content="https://zinseszinsrechners.de/zinsrechner.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Zinsrechner">
+    <meta property="og:locale" content="de_DE">
+    <meta property="article:author" content="Finanz Rechner">
+    <meta property="article:published_time" content="2026-03-09T12:00:00Z">
+    <meta property="article:modified_time" content="2026-03-09T12:00:00Z">
+    <meta property="article:section" content="Finanzrechner">
+    <meta property="article:tag" content="Zinsrechner">
+    <meta property="article:tag" content="Endkapital">
+    <meta property="article:tag" content="Geldanlage">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@zinseszinsrechner">
+    <meta name="twitter:creator" content="@zinseszinsrechner">
+    <meta name="twitter:title" content="Zinsrechner: Endkapital einer Geldanlage verstehen">
+    <meta name="twitter:description" content="Nutze den Zinsrechner für einmalige Geldanlagen, um dein mögliches Endkapital und die Wirkung der Zinsen einfach und transparent zu verstehen.">
+    <meta name="twitter:image" content="https://zinseszinsrechners.de/zinsrechner.jpg">
+    <meta name="twitter:image:alt" content="Zinsrechner">
+    <meta name="twitter:url" content="https://zinseszinsrechners.de/">
+    
+    <title>Zinsrechner: Endkapital einer Geldanlage verstehen</title>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Zinsrechner: Endkapital einer Geldanlage verstehen",
+        "description": "Nutze den Zinsrechner für einmalige Geldanlagen, um dein mögliches Endkapital und die Wirkung der Zinsen einfach und transparent zu verstehen.",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://zinseszinsrechners.de/zinsrechner.jpg",
+            "width": 1200,
+            "height": 630
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Finanz Rechner",
+            "url": "https://zinseszinsrechners.de"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Finanz Rechner",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://zinseszinsrechners.de/logo.png",
+                "width": 200,
+                "height": 60
+            }
+        },
+        "datePublished": "2026-03-09T12:00:00Z",
+        "dateModified": "2026-03-09T12:00:00Z",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://zinseszinsrechners.de/"
+        },
+        "articleSection": "Finanzrechner",
+        "keywords": ["Zinsrechner einmalige Geldanlage", "Endkapital berechnen", "Zinsen und Zinseszins verstehen", "Geldanlage einfach erklärt"],
+        "wordCount": 500,
+        "articleBody": "Wer einmalig Geld anlegt, stellt sich oft dieselbe Frage: Wie viel kommt am Ende tatsächlich dabei heraus?"
+    }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Code+Pro:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+            color: #14532d;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .calculator-interface {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* CALCULATOR HEADER */
+        .calc-header {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            padding: 25px 35px;
+            border-radius: 16px 16px 0 0;
+            border: 2px solid #065f46;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calc-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(30px, -30px);
+        }
+
+        .calc-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .calc-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .calc-title {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .calc-subtitle {
+            font-size: 15px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* CALCULATOR DISPLAY */
+        .calc-display {
+            background: #ffffff;
+            border: 2px solid #065f46;
+            border-top: none;
+            padding: 0;
+        }
+
+        .display-row {
+            display: flex;
+            border-bottom: 1px solid #d1fae5;
+            min-height: 60px;
+        }
+
+        .display-row:last-child {
+            border-bottom: none;
+        }
+
+        .row-label {
+            background: #f0fdf4;
+            border-right: 1px solid #d1fae5;
+            padding: 20px 25px;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 13px;
+            font-weight: 600;
+            color: #065f46;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            min-width: 180px;
+            position: relative;
+        }
+
+        .row-label::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 20px;
+            background: #10b981;
+            border-radius: 2px;
+        }
+
+        .row-content {
+            flex: 1;
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .row-content p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #166534;
+            text-align: justify;
+            margin: 0;
+        }
+
+        /* SPECIAL CALCULATION ROWS */
+        .calc-row {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+        }
+
+        .calc-row .row-label {
+            background: #10b981;
+            color: white;
+        }
+
+        .calc-row .row-label::after {
+            background: white;
+        }
+
+        .calc-row .row-content p {
+            color: #065f46;
+            font-weight: 500;
+        }
+
+        .result-row {
+            background: linear-gradient(135deg, #6ee7b7 0%, #34d399 100%);
+            border-bottom: 2px solid #059669 !important;
+        }
+
+        .result-row .row-label {
+            background: #047857;
+            color: white;
+            font-weight: 700;
+        }
+
+        .result-row .row-label::after {
+            background: #6ee7b7;
+        }
+
+        .result-row .row-content p {
+            color: #064e3b;
+            font-weight: 600;
+        }
+
+        /* FORMULA DISPLAY */
+        .formula-row {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 1px solid #f59e0b;
+        }
+
+        .formula-row .row-label {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .formula-row .row-label::after {
+            background: #fbbf24;
+        }
+
+        .formula-row .row-content {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 14px;
+            color: #92400e;
+            font-weight: 500;
+        }
+
+        /* LINKS */
+        a {
+            color: #059669;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        a:hover {
+            background: #d1fae5;
+            border-bottom-color: #059669;
+            transform: translateY(-1px);
+        }
+
+        /* CALCULATOR FOOTER */
+        .calc-footer {
+            background: #065f46;
+            color: white;
+            padding: 20px 35px;
+            border-radius: 0 0 16px 16px;
+            border: 2px solid #065f46;
+            border-top: none;
+            text-align: center;
+        }
+
+        .footer-info {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 12px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .calculator-interface {
+                padding: 15px;
+            }
+            
+            .calc-header {
+                padding: 20px 25px;
+            }
+            
+            .calc-title {
+                font-size: 22px;
+            }
+            
+            .calc-subtitle {
+                font-size: 14px;
+            }
+            
+            .display-row {
+                flex-direction: column;
+                min-height: auto;
+            }
+            
+            .row-label {
+                min-width: auto;
+                border-right: none;
+                border-bottom: 1px solid #d1fae5;
+                padding: 15px 20px;
+            }
+            
+            .row-label::after {
+                display: none;
+            }
+            
+            .row-content {
+                padding: 15px 20px;
+            }
+            
+            .row-content p {
+                font-size: 14px;
+                text-align: left;
+            }
+            
+            .calc-footer {
+                padding: 16px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .calculator-interface {
+                padding: 10px;
+            }
+            
+            .calc-header {
+                padding: 16px 20px;
+            }
+            
+            .calc-title {
+                font-size: 20px;
+            }
+            
+            .calc-brand {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            
+            .row-label {
+                padding: 12px 16px;
+                font-size: 12px;
+            }
+            
+            .row-content {
+                padding: 12px 16px;
+            }
+            
+            .row-content p {
+                font-size: 13px;
+                line-height: 1.6;
+            }
+            
+            .calc-footer {
+                padding: 12px 20px;
+            }
+            
+            .footer-info {
+                font-size: 11px;
+            }
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .calc-header {
+                background: #f0f0f0 !important;
+                color: #000 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .calc-header::before {
+                display: none;
+            }
+            
+            .row-label {
+                background: #f0f0f0 !important;
+                color: #000 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .row-label::after {
+                background: #ccc !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .calc-row .row-label,
+            .result-row .row-label,
+            .formula-row .row-label {
+                background: #e0e0e0 !important;
+                color: #000 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            a {
+                color: #000 !important;
+                text-decoration: underline !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-interface">
+        <header class="calc-header">
+            <div class="calc-brand">
+                <div class="calc-icon">📊</div>
+                <div>
+                    <h1 class="calc-title">Zinsrechner: Endkapital einer Geldanlage verstehen</h1>
+                    <p class="calc-subtitle">Berechne dein Wachstumspotential transparent und einfach</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="calc-display">
+            <div class="display-row">
+                <div class="row-label">Grundfrage</div>
+                <div class="row-content">
+                    <p>Wer einmalig Geld anlegt, stellt sich oft dieselbe Frage: Wie viel kommt am Ende tatsächlich dabei heraus? Ein Zinsrechner für einmalige Geldanlage hilft dir, genau dieses Endkapital übersichtlich zu bestimmen. Statt selbst Formeln zu benutzen oder grob zu schätzen, siehst du mit wenigen Eingaben, wie stark Zinsen und Laufzeit dein Guthaben wachsen lassen. So bekommst du ein klareres Gefühl dafür, ob ein Angebot wirklich attraktiv ist oder ob du nach besseren Konditionen suchen solltest.</p>
+                </div>
+            </div>
+
+            <div class="display-row calc-row">
+                <div class="row-label">Funktionsweise</div>
+                <div class="row-content">
+                    <p>Die Funktionsweise ist einfach: Du trägst dein Anfangskapital ein, also den Betrag, den du einmalig anlegen möchtest. Dazu gibst du einen Zinssatz und die geplante Laufzeit in Jahren an. Der Zinsrechner zeigt dir anschließend an, wie hoch dein Guthaben am Ende der Laufzeit voraussichtlich sein wird. Häufig kannst du auch wählen, ob Zinsen jährlich wieder angelegt werden sollen. In diesem Fall profitierst du zusätzlich vom Zinseszinseffekt, weil nicht nur dein ursprüngliches Kapital, sondern auch bereits gutgeschriebene Zinsen weiter verzinst werden.</p>
+                </div>
+            </div>
+
+            <div class="display-row">
+                <div class="row-label">Transparenz</div>
+                <div class="row-content">
+                    <p>Gerade für Einsteiger ist der Unterschied zwischen einfacher Verzinsung und Zinseszins oft schwer vorstellbar. Ein Rechner schafft hier Transparenz, indem er nicht nur das Endkapital ausgibt, sondern dir auch zeigt, wie viele Zinsen insgesamt über die Jahre anfallen. So erkennst du, welcher Anteil deines Endbetrags aus deinem ursprünglichen Kapital stammt und wie viel allein durch Zinsen hinzugekommen ist. Diese Aufteilung macht anschaulich, warum längere Laufzeiten bei einer einmaligen Geldanlage so kraftvoll sein können.</p>
+                </div>
+            </div>
+
+            <div class="display-row calc-row">
+                <div class="row-label">Szenarien</div>
+                <div class="row-content">
+                    <p>Hilfreich ist es auch, verschiedene Szenarien durchzuspielen. Du kannst zum Beispiel testen, wie sich dein Endkapital verändert, wenn du den Zinssatz leicht erhöhst oder die Laufzeit um ein paar Jahre verlängerst. Schon kleine Unterschiede, etwa ein Prozentpunkt mehr Zinsen oder drei zusätzliche Jahre, führen am Ende zu deutlich höheren Beträgen. Wer das einmal gesehen hat, versteht besser, warum es sich lohnen kann, Angebote zu vergleichen oder etwas länger auf sein Geld zu verzichten, um von höheren Zinsen zu profitieren.</p>
+                </div>
+            </div>
+
+            <div class="display-row formula-row">
+                <div class="row-label">Vertiefung</div>
+                <div class="row-content">
+                    <p>Wenn du noch tiefer einsteigen möchtest, kannst du dir zusätzlich <a href="https://zinseszinsrechners.de/">zinseszins tabellen</a> ansehen. Sie zeigen in tabellarischer Form, wie sich dein Kapital Jahr für Jahr entwickelt und wie stark der Zinseszinseffekt im Zeitverlauf zunimmt. Gerade visuelle oder strukturierte Darstellungen helfen dabei, abstrakte Prozentzahlen in konkrete Beträge zu übersetzen.</p>
+                </div>
+            </div>
+
+            <div class="display-row result-row">
+                <div class="row-label">Fazit</div>
+                <div class="row-content">
+                    <p>Ein Zinsrechner ist damit mehr als nur ein Tool zur schnellen Berechnung. Er unterstützt dich dabei, deine Geldanlage bewusster zu planen und realistische Erwartungen zu entwickeln. Nutze ihn, bevor du dich für ein Produkt entscheidest, und überprüfe, ob Laufzeit und Zinssatz zu deinen Zielen passen. So triffst du fundiertere Entscheidungen, verstehst dein zukünftiges Endkapital besser und vermeidest Enttäuschungen, weil du von Anfang an weißt, was du von deiner einmaligen Geldanlage ungefähr erwarten kannst.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="calc-footer">
+            <div class="footer-info">
+                💰 Verstehe dein Wachstumspotential • Plane bewusst • © 2026 Finanz Rechner
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
